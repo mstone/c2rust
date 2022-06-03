@@ -36,4 +36,3 @@ chmod -R a+w ~/.rustup
 echo "${TARGETS}" | while read -r rust_target; do
   rustup target add "${rust_target}"
 done
-cargo install cargo-zigbuild
