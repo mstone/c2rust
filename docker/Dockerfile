@@ -22,7 +22,7 @@ ENV TARGETS="${TARGETS}"
 
 # Provision debian and python packages 
 COPY provision*.sh /tmp/
-COPY requirements.txt /tmp/requirements.txt
+COPY requirements.txt /tmp/
 RUN chmod +x /tmp/provision*.sh && /tmp/provision.sh
 
 USER $USER
@@ -31,7 +31,6 @@ ARG RUST_VER=nightly-2021-11-22
 RUN RUST_VER=$RUST_VER /tmp/provision_rust.sh
 
 ENV PATH="/home/${USER}/.cargo/bin:${PATH}"
-
 ENV CARGO_HOME="/tmp/.cargo"
 ENV RUSTUP_HOME="/home/${USER}/.rustup"
 
