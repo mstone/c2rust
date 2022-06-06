@@ -1,4 +1,3 @@
-//! xfail
 //! feature_asm,extern_crate_c2rust_asm_casts
 
 extern crate libc;
